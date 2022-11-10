@@ -8,10 +8,14 @@ public class Main {
         long time = System.currentTimeMillis();
 
         for (int k = 0; k < 8; k++) {
-            for (int i = 0; i < 100; i++) {
-                String result = Search.solution(Tools.randomCube(), 20+k, 5, true);
+            for (int i = 0; i < 1000; i++) {
+                String result = Search.solution(Tools.randomCube(), 20 + k, 10, true);
+                if (result.startsWith("Error")) {
+                    System.out.println(result);
+                }
             }
-            System.out.println(time - System.currentTimeMillis());
+            long time100 = time - System.currentTimeMillis();
+            System.out.printf("solve limit %d in %dms\n", 20 + k, Math.abs(time100 / 1000));
             time = System.currentTimeMillis();
 
         }

@@ -1,0 +1,1 @@
+code from http://kociemba.org/cube.htm
